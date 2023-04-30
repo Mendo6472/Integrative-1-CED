@@ -1,8 +1,8 @@
 package model;
 
-import datastructures.Hashtable.HashTable;
-import datastructures.Heap.Heap;
-import datastructures.Heap.Node;
+import datastructures.HashTable.HashTable;
+import datastructures.PriorityQueue.Heap;
+import datastructures.Node;
 
 import java.io.*;
 
@@ -10,7 +10,7 @@ public class Controller {
     int rows;
     int seatsPerRow;
     HashTable<String, Passenger> passengersHash = new HashTable<>(5);
-    Heap<inputPriority, String> passengersQueue = new Heap<>();
+    Heap<InputPriority, String> passengersQueue = new Heap<>();
 
     public Controller() throws IOException {
         fillPassengers();
@@ -33,7 +33,7 @@ public class Controller {
                 String[] passenger;
                 passenger = currentLine.split(";");
                 passengersHash.insert(passenger[0] , new Passenger(passenger[0], passenger[1], passenger[2], passenger[3], Long.parseLong(passenger[4]), lineNumber-2));
-                passengersQueue.insert(new inputPriority(passenger[2], passenger[3], Float.parseFloat(passenger[4]), passenger[0], lineNumber-2), passenger[0]);
+                passengersQueue.insert(new InputPriority(passenger[2], passenger[3], Float.parseFloat(passenger[4]), passenger[0], lineNumber-2), passenger[0]);
             }
         }
         passengersQueue.buildMaxHeap();
@@ -63,11 +63,11 @@ public class Controller {
         this.passengersHash = passengersHash;
     }
 
-    public Heap<inputPriority,String> getPassengersQueue() {
+    public Heap<InputPriority,String> getPassengersQueue() {
         return this.passengersQueue;
     }
 
-    public void setPassengersQueue(Heap<inputPriority,String> passengersQueue) {
+    public void setPassengersQueue(Heap<InputPriority,String> passengersQueue) {
         this.passengersQueue = passengersQueue;
     }
 }
