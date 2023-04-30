@@ -1,4 +1,5 @@
-package datastructures.Heap;
+package datastructures.PriorityQueue;
+import datastructures.Node;
 
 public interface PriorityQueue <K extends Comparable <K>,V>{
     public Node<K,V> maximum();

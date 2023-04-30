@@ -1,4 +1,4 @@
-package datastructures.Hashtable;
+package datastructures.HashTable;
 import datastructures.Node;
 
 public class HashTable<K extends Comparable <K>, V> implements IHashTable<K, V>{

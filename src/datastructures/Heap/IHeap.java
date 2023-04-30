@@ -1,5 +1,6 @@
 package datastructures.Heap;
 
+import datastructures.Node;
 import java.util.ArrayList;
 
 public interface IHeap<K extends Comparable <K>, V> {
