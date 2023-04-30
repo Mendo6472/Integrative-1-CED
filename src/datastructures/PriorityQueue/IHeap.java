@@ -1,4 +1,5 @@
-package datastructures.Heap;
+package datastructures.PriorityQueue;
+import datastructures.Node;
 
 import java.util.ArrayList;
 
