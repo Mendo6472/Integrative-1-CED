@@ -1,0 +1,5 @@
+5
+8
+B4;Alejandro Londoño Bermúdez;yes;no;10
+A1;Santiago Valencia García;yes;yes;10
+C5;Julián Andrés Mendoza Castro;yes;no;10
