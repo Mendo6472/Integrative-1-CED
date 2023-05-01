@@ -43,7 +43,7 @@ public class OutputPriority implements Comparable<OutputPriority> {
              int otherCercanyToMid = Math.abs(seatNum2-middleRow);
              result = otherCercanyToMid - thisCercanyToMid;
              if(result == 0){
-                 result = o.arrivalNumber - this.arrivalNumber;
+                result = this.arrivalNumber - o.arrivalNumber;
              }
         }
  
