@@ -1,4 +1,4 @@
-8
+7
 6
 A3;Juan Manuel Sánchez;yes;no;12
 B4;Javier López;yes;no;8
