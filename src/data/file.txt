@@ -1,0 +1,44 @@
+7
+6
+A3;Juan Manuel Sánchez;yes;no;12
+B4;Javier López;yes;no;8
+H6;Sofía Pérez;no;yes;4
+D1;Andrea Rodríguez;no;no;2
+E2;Manuel González;no;yes;14
+F5;María Fernández;no;no;7
+G1;José Ramírez;no;yes;10
+A2;Luisa Ortiz;yes;no;6
+B6;Miguel Ángel Pérez;yes;yes;5
+C4;Ana Belén Gómez;yes;no;9
+D5;Juan Carlos Castro;no;no;1
+E1;Isabella Hernández;no;no;3
+F3;Carolina Suárez;no;no;0
+G6;Ricardo Ramírez;no;yes;11
+A6;Valentina Giraldo;yes;no;13
+B3;Pedro Ruiz;yes;no;4
+C1;Laura González;yes;no;15
+D4;Carlos Morales;no;yes;2
+E6;Silvia Cruz;no;no;7
+F2;Jorge García;no;no;1
+G5;Ana María Gómez;no;yes;12
+A5;Andrés López;yes;no;8
+B1;Marcela Torres;yes;no;11
+C3;Daniel Gutiérrez;yes;yes;5
+D6;Valeria Sánchez;no;no;6
+E3;David Ramírez;no;yes;14
+H3;Alejandra González;no;no;3
+G2;Felipe Ortiz;no;no;0
+A1;Gabriela García;yes;no;9
+B5;Julieta Rodríguez;yes;yes;10
+C2;Samuel Castro;yes;no;4
+D3;Mónica Hernández;no;no;2
+E5;Santiago Gómez;no;yes;13
+F1;Camila Suárez;no;no;1
+G4;Luis González;no;yes;12
+A4;Carlos Pérez;yes;no;7
+B2;Isabel Ramírez;yes;no;0
+C6;Juan Pablo Gómez;yes;yes;15
+D2;Lucas Torres;no;no;5
+E4;María Paula Ortiz;no;yes;11
+F6;Pablo García;no;no;4
+G3;Natalia Hernández;no;yes;9
