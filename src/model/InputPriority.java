@@ -18,6 +18,10 @@ public class InputPriority implements Comparable<InputPriority> {
         if (!p1HighClass && p2HighClass) return -1;
 
         if(p1HighClass && p2HighClass){
+            int rowCmp = this.getSeat().substring(0, 1).compareTo(p2.seat.substring(0, 1));
+            if (rowCmp != 0) {
+                return rowCmp;
+            }
             int vulnerableCmp = this.getVulnerable().compareTo(p2.getVulnerable());
             if (vulnerableCmp != 0) {
                 return vulnerableCmp;
@@ -26,10 +30,7 @@ public class InputPriority implements Comparable<InputPriority> {
             if (milesCmp != 0) {
                 return milesCmp;
             }
-            int rowCmp = this.getSeat().substring(0, 1).compareTo(p2.seat.substring(0, 1));
-            if (rowCmp != 0) {
-                return rowCmp;
-            }
+
             return Integer.compare(p2.getArrivalNumber(), this.getArrivalNumber());
         }
         else {

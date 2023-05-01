@@ -3,16 +3,20 @@ package model;
 import datastructures.HashTable.HashTable;
 import datastructures.PriorityQueue.Heap;
 import datastructures.Node;
-
+import model.InputPriority;
+import model.OutputPriority;
 import java.io.*;
 
 public class Controller {
     int rows;
     int seatsPerRow;
     HashTable<String, Passenger> passengersHash = new HashTable<>(5);
-    Heap<InputPriority, String> passengersQueue = new Heap<>();
+    Heap<InputPriority, String> passengersInputQueue = new Heap<>();
+    Heap<OutputPriority, String> passengersOutputQueue = new Heap<>();
 
     public Controller() throws IOException {
+
+
         fillPassengers();
     }
 
@@ -33,10 +37,12 @@ public class Controller {
                 String[] passenger;
                 passenger = currentLine.split(";");
                 passengersHash.insert(passenger[0] , new Passenger(passenger[0], passenger[1], passenger[2], passenger[3], Long.parseLong(passenger[4]), lineNumber-2));
-                passengersQueue.insert(new InputPriority(passenger[2], passenger[3], Float.parseFloat(passenger[4]), passenger[0], lineNumber-2), passenger[0]);
+                passengersInputQueue.insert(new InputPriority(passenger[2], passenger[3], Float.parseFloat(passenger[4]), passenger[0], lineNumber-2), passenger[0]);
+                passengersOutputQueue.insert(new OutputPriority(lineNumber-2,passenger[0],seatsPerRow), passenger[0]);
             }
         }
-        passengersQueue.buildMaxHeap();
+        passengersInputQueue.buildMaxHeap();
+        passengersOutputQueue.buildMaxHeap();
     }
 
     public int getRows() {
@@ -63,11 +69,19 @@ public class Controller {
         this.passengersHash = passengersHash;
     }
 
-    public Heap<InputPriority,String> getPassengersQueue() {
-        return this.passengersQueue;
+    public Heap<InputPriority,String> getPassengersInputQueue() {
+        return this.passengersInputQueue;
     }
 
-    public void setPassengersQueue(Heap<InputPriority,String> passengersQueue) {
-        this.passengersQueue = passengersQueue;
+    public void setPassengersInputQueue(Heap<InputPriority,String> passengersInputQueue) {
+        this.passengersInputQueue = passengersInputQueue;
+    }
+
+    public Heap<OutputPriority,String> getPassengersOutputQueue() {
+        return this.passengersOutputQueue;
+    }
+
+    public void setPassengersOutputQueue(Heap<OutputPriority,String> passengersOutputQueue) {
+        this.passengersOutputQueue = passengersOutputQueue;
     }
 }
